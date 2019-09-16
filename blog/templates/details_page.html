@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block hahaha %}
+		<div class='container-fluid'>
+			<div class='row col-sm-offset-2'>
+		
+				<form class='col-sm-10 table-bordered '>
+						<div class='text-center'>
+						<label><h3>{{ data[1] |capitalize  }}</h3></label>
+						</div>
+						<div>	
+						<label><h4>{{ vender_markdown(data[2]) |safe }}</h4></label>
+						</div>
+						<label><h4>标签：</h4></label>
+						<label><h4>{{ data[4] }}</h4></label>
+						<br>
+						<label><h4>{{ data[3] }}</h4></label>
+						<br>
+						<a href="{{ url_for('edit',pid=data[0]) }}"><h4>编辑</h4></a>
+						<a href="{{ url_for('delete',pid=data[0]) }}"><h4>删除</h4></a>
+					
+				</form>
+			</div>
+		</div>
+{% endblock %}

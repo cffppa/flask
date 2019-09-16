@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block hahaha %}
+	<div class='container'>
+		<div class='row'>
+				<form class=' form-horizontal' method='POST' role='form'>
+				<div class='from-group'>
+						<label class='col-sm-1 control-label'>title</label>
+						<div class='col-sm-11'>
+						<input name='title' class="form-control" type='text' value='{{ data[1] }}'>
+						</div>	
+				</div>
+				<div class='from-group'>
+						<label class='col-sm-1 control-label'>content</label>
+						<div class='col-sm-11'>
+						<textarea  name='body'  class="form-control " type='text' rows='15' >{{ data[2] }}</textarea>
+						</div>
+				</div>
+				<div class='from-group'>
+						<label class='col-sm-1 control-label'>tag</label>
+						<div class='col-sm-11'>
+						<input name='tag' class="form-control" type='text' value='{{ data[4] }}'>
+						</div>
+				</div>
+				<div class='from-group'>
+					<div  class='col-sm-offset-1' >	
+						<button type='submit' class="btn btn-default control-label">提交</button>
+					</div>
+				</div>
+				</div>
+				</form>
+			</div>
+
+		</div>
+
+{% endblock %}
